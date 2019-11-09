@@ -1,0 +1,108 @@
+:root{
+	--primary   :#15153e;
+	--secondary : rgba(46, 48, 131, .8);
+	--light     : #ffffff;
+	--dark      : #000000;
+	--primary-font : 'Walsheim';
+}
+@font-face {
+    font-family: 'Walsheim';
+    src: url('./fonts/GT-Walsheim-Bold.woff2');
+}
+::-webkit-scrollbar{
+    box-shadow: inset 0 0 7px rgba(0,0,0,.1);
+	width: 7px;
+}
+::-ms-scrollbar{
+    box-shadow: inset 0 0 7px rgba(0,0,0,.1);
+	width: 7px;
+}
+::-ms-scrollbar-thumb{
+	background-color:rgb(143, 143, 162);
+}
+::-webkit-scrollbar-thumb{
+    background-color:rgb(143, 143, 162);
+}
+a{
+	color: var(--light);
+	text-decoration: none;
+}
+.rounded-pill{
+	border-radius: 100%;
+}
+.muted{
+	color: #d5d5d5;
+}
+body{
+	padding: 0;
+	margin: 0;
+}
+header {
+	background: var(--primary);
+	background: linear-gradient(to bottom, rgba(21, 21, 62, .9) 0%, rgba(21, 21, 62, .8) 100%), url("../images/bg.bmp");
+	background: -ms-linear-gradient(to bottom, rgba(21, 21, 62, .98) 0%, rgba(21, 21, 62, .8) 100%), url("../images/bg.bmp");
+	padding:.5em;
+	border-radius: 0 0 317px 0;
+}
+header .branding{
+
+}
+.branding img{
+	width: 80px;
+	height: 45px;
+}
+header nav.top-navbar{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 1em;
+}
+nav.top-navbar ul{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-transform: capitalize;
+	display: flex;
+}
+
+ul.top-navigation li a{
+	text-decoration: none;
+	padding: 0 1em;
+	font-family: sans-serif;
+	font-size: .9em;
+}
+header .user-section{
+	/*display: flex;*/
+	position: relative;
+}
+.user-section .user-avatar{
+	margin-bottom: -125px;
+	margin-left: 4rem;
+}
+.user-avatar img{
+	cursor:  pointer;
+	cursor: pointer;
+  border: 2px solid;
+  border-top-color: var(--light);
+  border-left-color: var(--light);
+  border-right-color: var(--light);
+  border-bottom-color: transparent;
+  box-shadow : 0 0 2px rgba(0,0,0,.9);
+  padding: 4px;
+}
+
+.user-section .user-description{
+	color: white;
+	padding-left: 285px;
+}
+.user-description .user-name{
+	font-family: var(--primary-font);
+	font-size: 1.3em;
+}
+.user-description .user-role{
+	font-family: sans-serif;
+	font-size: .9em;
+	padding-left: .3em;
+}
+
+
