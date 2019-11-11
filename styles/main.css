@@ -27,6 +27,9 @@ a{
 	color: var(--light);
 	text-decoration: none;
 }
+.link{
+	color: #4dabd7 !important;
+}
 .rounded-pill{
 	border-radius: 100%;
 }
@@ -37,6 +40,9 @@ body{
 	padding: 0;
 	margin: 0;
 }
+
+/* @Header section */
+
 header {
 	background: var(--primary);
 	background: linear-gradient(to bottom, rgba(21, 21, 62, .9) 0%, rgba(21, 21, 62, .8) 100%), url("../images/bg.bmp");
@@ -105,4 +111,131 @@ header .user-section{
 	padding-left: .3em;
 }
 
+/* Footer */
+footer{
+	background: #f3f3f3;
+	padding: 1em;
+	font-size: .9em;
+	font-family: sans-serif;
+	display: flex;
+	justify-content: space-around;
+	color: #18183b;
+	font-weight: bold;
+}
+footer i {
+	font-size: 16px;
 
+}
+
+/* @Main section */
+main.main-section{
+	position: relative;
+	margin-top: 80px;
+	padding: .5em 3em;
+	display: flex;
+	flex-direction: row;
+	font-family: sans-serif;
+	line-height: 25px;
+	font-size: .96em;
+}
+.main-section .left-side{
+  min-width: 40%;
+  text-align: justify;
+}
+.left-side .contacts{
+	margin-top: 1.5em;
+	line-height: 28px;
+}
+.contacts i{
+	padding-right: .4em;
+	font-size: 1.1em;
+	color: #16163a;
+}
+.main-section .right-side{
+
+}
+.right-side .blocks {
+	margin-left: 1.5em;
+}
+.blocks .block{
+	position: relative;
+	/*border-left: 5px solid green;*/
+}
+.block .block-border{
+	background: rgba(77, 171, 217, .6);
+  width: 6px;
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 102%;
+}
+.block .block-linker{
+	position: absolute;
+	color: #7978f1;
+	bottom: 0;
+	left: -6px;
+	bottom: -17px;
+	z-index: 2;
+}
+.block .block-heading{
+	text-transform: uppercase;
+	padding-left: .8em;
+	color: #18183b;
+}
+.block .block-contents{
+	padding-left: 2em;
+	line-height: 30px;
+}
+.block-contents i{
+	color: #d6e4ec;
+}
+/* Responsiveness */
+@media(max-width: 760px){
+	header{
+		border-radius: 0;
+	}
+	header nav.top-navbar{
+		padding-bottom: 0;
+	}
+	.user-section{
+		text-align: center;
+	}
+	.user-section .user-avatar{
+		margin-bottom: 0;
+		margin-left: 0;
+	}
+	.user-avatar img{
+		border-bottom-color: var(--light);
+		margin: 0 auto;
+	}
+	.user-section .user-description{
+		padding-left: 0;
+	}
+	main.main-section{
+		flex-wrap: wrap;
+		margin-top: 10px;
+		padding: .5em 1.5em;
+	}
+	.main-section .right-side .blocks{
+		margin-left: 0;
+	}
+}
+@media(max-width: 460px){
+	header{
+		border-radius: 0;
+	}
+	header nav.top-navbar{
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+		padding-bottom: .6em;
+	}
+	nav.top-navbar ul{
+		line-height: 28px;
+		flex-wrap: wrap;
+	}
+	header .branding img{
+		display: none;
+	}
+}
+/* @Vainqueur Bihame - https://github.com/WinnersProx */
