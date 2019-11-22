@@ -18,7 +18,30 @@ navUrls.forEach(nav => {
 	nav.addEventListener('click', e => {
 		e.preventDefault();
 		let target = e.target.getAttribute('data-target');
-		let offset = $$(`#${target}`).offsetTop;
-		smoothScroll(offset);
+		const offsetTop = $$(`#${target}`).offsetTop;
+		const offsetHeight =  $$(`#${target}`).offsetHeight;
+		smoothScroll(offsetTop);
 	})
-})
+});
+// Load overlay with image
+$$('.user-avatar img').addEventListener('click', e => {
+	const target = e.target;
+	const overlay = document.createElement('div');
+	const oImg = document.createElement('img');
+	const src = target.src.substr(target.src.indexOf('/i'));
+
+	overlay.classList.add('overlay');
+	oImg.classList.add('overlay-img');
+	oImg.setAttribute('src', `.${src}`);
+	overlay.append(oImg);
+	$$('body').append(overlay);
+});
+
+
+window.addEventListener('click', e => {
+	const isTriggerer = e.target.matches('.user-avatar img');
+	if(!e.target.matches('.overlay-img') && $$('.overlay') && !isTriggerer)
+		$$('.overlay').remove();
+});
+
+

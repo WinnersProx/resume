@@ -4,6 +4,7 @@
 	--light     : #ffffff;
 	--dark      : #000000;
 	--primary-font : 'Walsheim';
+	--pen-color    : rgba(93, 106, 239, 0.6);
 }
 @font-face {
     font-family: 'Walsheim';
@@ -162,8 +163,8 @@ main.main-section{
 	/*border-left: 5px solid green;*/
 }
 .block .block-border{
-	background: rgba(77, 171, 217, .6);
-  width: 6px;
+	background: var(--pen-color);
+  width: 2px;
   content: " ";
   position: absolute;
   top: 0;
@@ -172,15 +173,20 @@ main.main-section{
 }
 .block .block-linker{
 	position: absolute;
-	color: #7978f1;
-	bottom: 0;
-	left: -6px;
-	bottom: -17px;
-	z-index: 2;
+  color: #7978f1;
+  left: -22px;
+  background: white;
+  border: 2px solid #7978f1;
+  padding: 10px;
+  border-radius: 15rem;
+  bottom: -48px;
+  height: 20px;
+  width: 20px;
+  z-index: 2;
 }
 .block .block-heading{
 	text-transform: uppercase;
-	padding-left: .8em;
+	padding-left: 1.9em;
 	color: #18183b;
 }
 .block .block-contents{
@@ -237,5 +243,22 @@ main.main-section{
 	header .branding img{
 		display: none;
 	}
+}
+
+/* Overlay */
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    text-align: center;
+}
+img.overlay-img {
+    margin: 0 auto;
+    transform: translateY(10rem);
+    border-radius: 50%;
+    transition: transform ease-in-out .5s;
+    background-color: white;
 }
 /* @Vainqueur Bihame - https://github.com/WinnersProx */
